@@ -1,0 +1,27 @@
+program: mult.py
+method: bayes
+metric:
+  name: mean_squared_error
+  goal: minimize
+
+parameters:
+  hidden_dim1:
+    values: [32, 64, 128]
+  hidden_dim2:
+    values: [16, 32, 64]
+  latent_dim:
+    values: [8, 16, 32]
+  lr:
+    values: [0.001, 0.0001]
+  num_epochs:
+    values: [100, 150, 200]
+  end_mask_prob:
+    values: [0.5, 0.7, 0.9]
+  start_mask_prob:
+    values: [0.1, 0.3, 0.5, 0.7]
+  mask_prob_step:
+    values: [5, 10, 20]
+  finish_update:
+    values: [1, 0.5, 0.33]
+
+project: ML-autoencoder_autoML
